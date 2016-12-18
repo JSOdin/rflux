@@ -1,0 +1,6 @@
+pre. each top level component will have an event listener registered for the "change" event to the store.
+1. interaction with UI trigger a component method (either a prop or component exclusive method)
+2. this method triggers an action method - within which you should interact with a server here or whatever
+    - you also emit an action object to all registered stores
+3. within your store, upon detecting an action you do data manipulation here.
+4. then you emit the change event so that the component picks up on this and sets a new state (and tehreby updating the DOM)
